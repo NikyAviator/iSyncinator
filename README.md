@@ -38,7 +38,15 @@ sudo pacman -S ifuse rsync imagemagick
 ```bash
 git clone https://github.com/NikyAviator/iSyncinator
 ```
+
 2. Make the script executable:
+
 ```bash
-chmod +x 
+chmod +x iSync.sh
+```
+
+3. Run the script:
+
+```bash
+./iSync.sh
 ```
