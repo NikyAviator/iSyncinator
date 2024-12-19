@@ -28,3 +28,17 @@ Use the following command to install the required dependencies:
 ```bash
 sudo pacman -S ifuse rsync imagemagick
 ```
+
+---
+
+## Usage
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/NikyAviator/iSyncinator
+```
+2. Make the script executable:
+```bash
+chmod +x 
+```
