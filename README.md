@@ -10,7 +10,7 @@ This script allows you to mount an iOS device, copy all photos and videos to a s
 - Copies all photos and videos to a designated folder (default: `~/Pictures/iOS`).
 - Converts `.HEIC`/`.HEIF` images to `.jpg` format for compatibility.
 - Automatically cleans up original `.HEIC`/`.HEIF` files after conversion.
-- When everything is done - unmount your device again.
+- When everything is done - unmounts your device again.
 
 ---
 
@@ -53,3 +53,14 @@ chmod +x iSync.sh
 ```
 
 4. By default you will find your Pics/Videos in: `~/Pictures/iOS `
+
+---
+
+## Customization
+
+You can change the target directory (where the data will be saved)
+by modifying the `TARGET_DIR` variable in the script:
+
+```bash
+TARGET_DIR="$HOME/YourCustomDirectory"
+```
