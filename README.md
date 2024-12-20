@@ -1,6 +1,6 @@
 # iOS Device Backup Script for Linux
 
-## Table of Contents
+## Table of Contents:
 
 1. [Features](#features)
 2. [Requirements](#requirements)
@@ -15,9 +15,7 @@
 
 ---
 
-## Features
-
-...
+## Features:
 
 - Mounts an iOS device (via `ifuse`).
 - Copies all photos and videos to a designated folder (default: `~/Pictures/iOS`).
@@ -27,7 +25,7 @@
 
 ---
 
-## Requirements
+## Requirements:
 
 ### Dependencies
 
@@ -45,7 +43,7 @@ sudo pacman -S ifuse rsync imagemagick
 
 ---
 
-## Usage
+## Usage:
 
 1. Clone the repository:
 
@@ -75,7 +73,7 @@ chmod +x iSync.sh
 
 ---
 
-## Customization
+## Customization:
 
 You can change the target directory (where the data will be saved)
 by modifying the `TARGET_DIR` variable in the script:
@@ -131,7 +129,7 @@ The script is designed to **only add files** to the destination folder. It does 
 
 If you want to enable deletion of files in the destination that are no longer on the phone, you can manually add the `--delete` flag to the `rsync` command, but **this is not recommended**.
 
-## Troubleshooting
+## Troubleshooting:
 
 Sometimes things go wrong and not working, this is why we will hopefully fix the problem now:
 
