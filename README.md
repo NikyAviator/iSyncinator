@@ -1,10 +1,23 @@
 # iOS Device Backup Script for Linux
 
-This script allows you to mount an iOS device, copy all photos and videos to a specified folder, and convert images to `.jpg` format using **ImageMagick**.
+## Table of Contents
+
+1. [Features](#features)
+2. [Requirements](#requirements)
+   - [Dependencies](#dependencies)
+   - [Install on Arch Linux](#install-on-arch-linux)
+3. [Usage](#usage)
+4. [Customization](#customization)
+5. [How `rsync` Works](#how-rsync-works)
+6. [How `rsync` Handles File Synchronization](#how-rsync-handles-file-synchronization)
+7. [Important Note on Sync Behavior](#important-note-on-sync-behavior)
+8. [Troubleshooting](#troubleshooting)
 
 ---
 
 ## Features
+
+...
 
 - Mounts an iOS device (via `ifuse`).
 - Copies all photos and videos to a designated folder (default: `~/Pictures/iOS`).
