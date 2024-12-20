@@ -124,4 +124,58 @@ Ensure the mount point `/mnt/iphone` exists, as the script relies on it to mount
 sudo mkdir -p /mnt/iphone
 ```
 
-2.
+2. **Give yourself ownership of the Mount Point**
+
+```bash
+sudo chown $USER:$USER /mnt/iphone
+```
+
+3. **Restart USBmuxd**
+   If the script still fails to mount the iOS device, restart the `usbmuxd` service:
+
+```bash
+sudo systemctl restart usbmuxd
+```
+
+4. **Trust Your Computer (Your Stuff)**
+
+If you are not prompted to "Trust This Computer" on your iPhone:
+
+1. Disconnect your iPhone.
+2. Unlock your iPhone and reconnect it.
+3. Look for the "Trust This Computer?" prompt and tap Trust.
+
+You can also revalidate the pairing with:
+
+```bash
+idevicepair validate
+```
+
+If it fails, unpair and re-pair:
+
+```bash
+idevicepair unpair
+idevicepair pair
+```
+
+5. **Check the Mounting Process**
+
+Manually test the mounting process to verify everything works:
+
+1. Mount the iPhone:
+
+```bash
+ifuse /mnt/iphone
+```
+
+2. Verify the files:
+
+```bash
+ls /mnt/iphone
+```
+
+Hope this works!
+
+This script will be updated when needed and the readme will reflect those changes.
+
+Have a great day!
