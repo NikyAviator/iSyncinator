@@ -112,6 +112,12 @@ To perform the actual sync, use the `--run` flag:
 
 ---
 
+## Important Note on Sync Behavior
+
+The script is designed to **only add files** to the destination folder. It does not delete or modify existing files in the destination, even if files are removed from the iPhone. This ensures that the destination folder acts as a permanent archive of your photos and videos.
+
+If you want to enable deletion of files in the destination that are no longer on the phone, you can manually add the `--delete` flag to the `rsync` command, but **this is not recommended**.
+
 ## Troubleshooting
 
 Sometimes things go wrong and not working, this is why we will hopefully fix the problem now:
