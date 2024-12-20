@@ -10,7 +10,7 @@ This script allows you to mount an iOS device, copy all photos and videos to a s
 - Copies all photos and videos to a designated folder (default: `~/Pictures/iOS`).
 - Converts `.HEIC`/`.HEIF` images to `.jpg` format for compatibility.
 - Automatically cleans up original `.HEIC`/`.HEIF` files after conversion.
-- When everything is done - unmounts your device again.
+- When everything is done - unmounts your device.
 
 ---
 
@@ -46,7 +46,7 @@ git clone https://github.com/NikyAviator/iSyncinator
 chmod +x iSync.sh
 ```
 
-3. Run the script as test first:
+3. Run the script as a test first:
 
 ```bash
 ./iSync.sh --dry-run
@@ -109,3 +109,19 @@ To perform the actual sync, use the `--run` flag:
    - `rsync` will compare the source and destination directories.
    - Only new or updated files will be copied.
    - Example: If you’ve taken 3 new photos (now 1003 files on the phone), `rsync` will copy only the 3 new files.
+
+---
+
+## Troubleshooting
+
+Sometimes things go wrong and not working, this is why we will hopefully fix the problem now:
+
+1. **Create the Mount Point**
+
+Ensure the mount point `/mnt/iphone` exists, as the script relies on it to mount your iOS device. To create it, run:
+
+```bash
+sudo mkdir -p /mnt/iphone
+```
+
+2.
