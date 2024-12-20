@@ -93,3 +93,19 @@ To perform the actual sync, use the `--run` flag:
 ```bash
 ./iSync.sh --run
 ```
+
+---
+
+## How `rsync` Handles File Synchronization
+
+`rsync` is an incremental synchronization tool. This means it will only transfer new or modified files from the source directory to the destination directory. Here’s how it works in practice:
+
+1. **First Run**:
+
+   - If the destination folder is empty, `rsync` will copy all files from the source to the destination.
+   - Example: If there are 1000 photos and videos on your device, all 1000 files will be copied.
+
+2. **Subsequent Runs**:
+   - `rsync` will compare the source and destination directories.
+   - Only new or updated files will be copied.
+   - Example: If you’ve taken 3 new photos (now 1003 files on the phone), `rsync` will copy only the 3 new files.
