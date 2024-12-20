@@ -1,4 +1,4 @@
-# iOS Device Backup Script
+# iOS Device Backup Script for Arch Linux
 
 This script allows you to mount an iOS device, copy all photos and videos to a specified folder, and convert images to `.jpg` format using **ImageMagick**.
 
