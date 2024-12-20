@@ -46,13 +46,19 @@ git clone https://github.com/NikyAviator/iSyncinator
 chmod +x iSync.sh
 ```
 
-3. Run the script:
+3. Run the script as test first:
 
 ```bash
-./iSync.sh
+./iSync.sh --dry-run
 ```
 
-4. By default you will find your Pics/Videos in: `~/Pictures/iOS `
+4. Then finally run the script:
+
+```bash
+./iSync.sh --run
+```
+
+5. By default you will find your Pics/Videos in: `~/Pictures/iOS `
 
 ---
 
