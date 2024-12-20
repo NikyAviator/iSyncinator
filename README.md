@@ -176,6 +176,6 @@ ls /mnt/iphone
 
 Hope this works!
 
-This script will be updated when needed and the readme will reflect those changes.
+This script will be updated when needed and the documentation will reflect those changes.
 
 Have a great day!
