@@ -64,3 +64,26 @@ by modifying the `TARGET_DIR` variable in the script:
 ```bash
 TARGET_DIR="$HOME/YourCustomDirectory"
 ```
+
+---
+
+## How `rsync` Works
+
+The **`rsync`** command is a powerful tool for file synchronization. It ensures only new or changed files are copied, saving time and bandwidth.
+
+### Flags Used in This Script
+
+- **`-a` (archive)**: Ensures recursive copying, preserving file attributes such as permissions and timestamps.
+- **`-v` (verbose)**: Displays detailed output of the operations being performed.
+- **`--progress`**: Shows the progress of each file being copied.
+- **`--dry-run`**: Simulates the operation without making changes. This is the default mode in this script to ensure safe syncing.
+
+### Why Use `--dry-run`?
+
+Running `--dry-run` first allows you to review the files that will be copied without actually modifying any data. This helps avoid mistakes or unnecessary transfers.
+
+To perform the actual sync, use the `--run` flag:
+
+```bash
+./iSync.sh --run
+```

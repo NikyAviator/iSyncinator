@@ -13,11 +13,29 @@ fi
 
 echo "iOS device mounted successfully."
 
-# Copy photos and videos
-echo "Copying photos and videos to $TARGET_DIR..."
-rsync -av --progress /mnt/iphone/DCIM/ "$TARGET_DIR/"
+# Dry-run mode by default
+DRYRUN="--dry-run"
+if [[ "$1" == "--run" ]]; then
+    DRYRUN=""
+    echo "Dry-run disabled. Syncing files for real!"
+else
+    echo "Running in dry-run mode. No files will be copied yet."
+    echo "To perform the actual sync, run the script with the '--run' flag."
+fi
 
-# Convert HEIC/HEIF images to JPG (or PNG)
+# Copy photos and videos with rsync
+echo "Syncing photos and videos to $TARGET_DIR..."
+rsync -av $DRYRUN --progress /mnt/iphone/DCIM/ "$TARGET_DIR/"
+
+# Count newly copied files
+if [[ -z "$DRYRUN" ]]; then
+    NEW_FILES=$(rsync -av --stats --progress /mnt/iphone/DCIM/ "$TARGET_DIR/" | grep "Number of created files" | awk '{print $5}')
+    echo "$NEW_FILES new files copied to $TARGET_DIR."
+else
+    echo "Dry-run complete. No files were copied. Review the above output for details."
+fi
+
+# Convert HEIC/HEIF images to JPG
 echo "Converting images to JPG..."
 find "$TARGET_DIR" -type f \( -iname '*.heic' -o -iname '*.heif' \) -exec mogrify -format jpg {} \;
 
