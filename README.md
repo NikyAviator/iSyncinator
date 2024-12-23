@@ -198,6 +198,13 @@ ifuse /mnt/iphone
 ls /mnt/iphone
 ```
 
+## Caution!
+
+If you clear your iPhone and it starts creating new photos with the same names as older ones (e.g., IMG_0001.JPG), the script could overwrite existing files in the archive if the new file's metadata is different.
+This will be fixed (I am working on a fix), so please caution for now!
+
+---
+
 Hope this works!
 
 This script will be updated when needed and the documentation will reflect those changes.
