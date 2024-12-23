@@ -1,19 +1,17 @@
 # iOS Device Backup Script for Linux
 
-## Table of Contents:
+## Table of Contents
 
 1. [Features](#features)
 2. [Requirements](#requirements)
    - [Dependencies](#dependencies)
-   - [Install on Arch Linux](#install-on-arch-linux)
+   - [Install on Linux](#install-on-linux)
 3. [Usage](#usage)
 4. [Customization](#customization)
 5. [How `rsync` Works](#how-rsync-works)
 6. [How `rsync` Handles File Synchronization](#how-rsync-handles-file-synchronization)
 7. [Important Note on Sync Behavior](#important-note-on-sync-behavior)
 8. [Troubleshooting](#troubleshooting)
-
----
 
 ## Features:
 
@@ -33,15 +31,24 @@
 2. **rsync**: For file synchronization.
 3. **ImageMagick**: For image format conversion.
 
-### Install on Arch Linux
+### Install on Linux
 
 Use the following command to install the required dependencies:
+
+**For Arch based systems:**
 
 ```bash
 sudo pacman -S ifuse rsync imagemagick
 ```
 
----
+**For Debian based systems:**
+
+```bash
+sudo apt update
+sudo apt install ifuse rsync imagemagick
+```
+
+#### Note: If you're using another Linux distribution, consult your package manager's documentation to install these dependencies.
 
 ## Usage:
 
