@@ -12,6 +12,7 @@
 6. [How `rsync` Handles File Synchronization](#how-rsync-handles-file-synchronization)
 7. [Important Note on Sync Behavior](#important-note-on-sync-behavior)
 8. [Troubleshooting](#troubleshooting)
+9. [Caution!](#caution)
 
 ## Features:
 
