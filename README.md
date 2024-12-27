@@ -101,6 +101,8 @@ The **`rsync`** command is a powerful tool for file synchronization. It ensures 
 - **`-a` (archive)**: Ensures recursive copying, preserving file attributes such as permissions and timestamps.
 - **`-v` (verbose)**: Displays detailed output of the operations being performed.
 - **`--progress`**: Shows the progress of each file being copied.
+- **`--backup`**: Creates a backup of existing files in the destination before overwriting.
+- **`--suffix=_$(date +%Y%m%d%H%M%S)`**: Appends the current timestamp to the backup file, ensuring uniqueness.
 - **`--dry-run`**: Simulates the operation without making changes. This is the default mode in this script to ensure safe syncing.
 
 ### Why Use `--dry-run`?
@@ -198,11 +200,6 @@ ifuse /mnt/iphone
 ```bash
 ls /mnt/iphone
 ```
-
-## Caution!
-
-If you clear your iPhone and it starts creating new photos with the same names as older ones (e.g., IMG_0001.JPG), the script could overwrite existing files in the archive if the new file's metadata is different.
-This will be fixed (I am working on a fix), so please caution for now!
 
 ---
 

@@ -25,7 +25,7 @@ fi
 
 # Copy photos and videos with rsync
 echo "Syncing photos and videos to $TARGET_DIR..."
-rsync -av $DRYRUN --progress /mnt/iphone/DCIM/ "$TARGET_DIR/"
+rsync -av $DRYRUN --progress --backup --suffix=_$(date +%Y%m%d%H%M%S) /mnt/iphone/DCIM/ "$TARGET_DIR/"
 
 # Count newly copied files
 if [[ -z "$DRYRUN" ]]; then
