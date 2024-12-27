@@ -12,6 +12,7 @@
 6. [How `rsync` Handles File Synchronization](#how-rsync-handles-file-synchronization)
 7. [Important Note on Sync Behavior](#important-note-on-sync-behavior)
 8. [Troubleshooting](#troubleshooting)
+9. [Optional File Renaming Script](#optional-file-renaming-script)
 
 ## Features:
 
@@ -204,7 +205,21 @@ ls /mnt/iphone
 
 After syncing, the script renames all files in the destination folder to ensure uniqueness and better organization. The new naming format includes the current date as a prefix:
 
+This ensures files are easy to identify and avoid duplication issues.
+
+### Usage:
+
+1. Make the script executable:
+   ```bash
+   chmod +x renameYourFiles.sh
+   ```
+2. Run the script:
+
+```bash
+./renameYourFiles.sh
+```
+
+3. After running, the files in the destination folder will be renamed as follows:
+
 - Original: `IMG_0001.JPG`
 - Renamed: `2024-12-23_IMG_0001.JPG`
-
-This ensures files are easy to identify and avoid duplication issues.
