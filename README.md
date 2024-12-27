@@ -12,7 +12,6 @@
 6. [How `rsync` Handles File Synchronization](#how-rsync-handles-file-synchronization)
 7. [Important Note on Sync Behavior](#important-note-on-sync-behavior)
 8. [Troubleshooting](#troubleshooting)
-9. [Caution!](#caution)
 
 ## Features:
 
@@ -201,10 +200,11 @@ ifuse /mnt/iphone
 ls /mnt/iphone
 ```
 
----
+## Optional File Renaming Script:
 
-Hope this works!
+After syncing, the script renames all files in the destination folder to ensure uniqueness and better organization. The new naming format includes the current date as a prefix:
 
-This script will be updated when needed and the documentation will reflect those changes.
+- Original: `IMG_0001.JPG`
+- Renamed: `2024-12-23_IMG_0001.JPG`
 
-Have a great day!
+This ensures files are easy to identify and avoid duplication issues.
