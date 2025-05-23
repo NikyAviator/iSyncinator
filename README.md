@@ -39,7 +39,7 @@ Use the following command to install the required dependencies:
 **For Arch based systems:**
 
 ```bash
-sudo pacman -S ifuse rsync imagemagick
+sudo pacman -S ifuse rsync libheif imagemagick
 ```
 
 **For Debian based systems:**
